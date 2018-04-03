@@ -6,7 +6,8 @@ import { updateProp } from "../../ducks/reducer";
 
 class WizardThree extends Component {
   render() {
-    const { updateProp } = this.props;
+    const { updateProp, propToBeUsedOn } = this.props;
+    console.log(propToBeUsedOn);
     return (
       <div className="parent-div">
         <div className="vert-align">
@@ -14,17 +15,26 @@ class WizardThree extends Component {
           <br />
           <div className="row">
             <Link to="/wFour">
-              <button value="primaryHome" onClick={updateProp}>
+              <button
+                value="primaryHome"
+                onClick={e => updateProp(e.target.value)}
+              >
                 Primary Home
               </button>
             </Link>
             <Link to="/wFour">
-              <button value="rentalProperty" onClick={updateProp}>
+              <button
+                value="rentalProperty"
+                onClick={e => updateProp(e.target.value)}
+              >
                 Rental Property
               </button>
             </Link>
             <Link to="/wFour">
-              <button value="secondaryHome" onClick={updateProp}>
+              <button
+                value="secondaryHome"
+                onClick={e => updateProp(e.target.value)}
+              >
                 Secondary Home
               </button>
             </Link>

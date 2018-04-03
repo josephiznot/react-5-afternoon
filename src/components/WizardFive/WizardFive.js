@@ -13,10 +13,10 @@ class WizardFive extends Component {
           <p>Are you currently working with a real estate agent?</p> <br />
           <div className="row">
             <Link to="/wSix">
-              <button onClick={updateAgent}>Yes</button>
+              <button onClick={() => updateAgent("yes")}>Yes</button>
             </Link>
             <Link to="/wSix">
-              <button onClick={updateAgent}>No </button>
+              <button onClick={() => updateAgent("no")}>No </button>
             </Link>
           </div>
         </div>

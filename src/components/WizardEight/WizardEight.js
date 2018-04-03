@@ -17,20 +17,23 @@ class WizardEight extends Component {
             <Link to="/wNine">
               <button
                 value="Has never been in bankruptcy"
-                onClick={updateHistory}
+                onClick={() => updateHistory("no")}
               >
                 No
               </button>
             </Link>
             <Link to="/wNine">
-              <button value="Has had bankruptcy before" onClick={updateHistory}>
+              <button
+                value="Has had bankruptcy before"
+                onClick={() => updateHistory("bankruptcy")}
+              >
                 Bankruptcy
               </button>
             </Link>
             <Link to="/wNine">
               <button
                 value="Has had a foreclosure before"
-                onClick={updateHistory}
+                onClick={() => updateHistory("foreclosure")}
               >
                 Foreclosure
               </button>
@@ -38,7 +41,7 @@ class WizardEight extends Component {
             <Link to="/wNine">
               <button
                 value="Has had both a foreclosure and a bankruptcy"
-                onClick={updateHistory}
+                onClick={() => updateHistory("foreclosure & bankruptcy")}
               >
                 Both
               </button>

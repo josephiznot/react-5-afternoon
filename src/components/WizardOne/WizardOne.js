@@ -6,12 +6,14 @@ import { updateLoanType, updatePropertyType } from "../../ducks/reducer";
 
 class WizardOne extends Component {
   render() {
+    console.log(this.props.loanType);
+    console.log(this.props.propertyType);
     const { updateLoanType, updatePropertyType } = this.props;
     return (
       <div className="parent-div">
         <div className="vert-align">
           <p>What type of loan will you be needing?</p> <br />
-          <select onChange={updateLoanType}>
+          <select onChange={e => updateLoanType(e.target.value)}>
             <option type="text" value="Home Purchase">
               Home Purchase
             </option>
@@ -24,7 +26,7 @@ class WizardOne extends Component {
           </select>{" "}
           <br />
           <p>What type of property are you purchasing?</p> <br />
-          <select onChange={updatePropertyType}>
+          <select onChange={e => updatePropertyType(e.target.value)}>
             <option value="Single Family Home">Single Family Home</option>
             <option value="Town Home">Townhome</option>
             <option value="Condo">Condo</option>
@@ -41,10 +43,10 @@ class WizardOne extends Component {
 }
 
 function mapStateToProps(state) {
-  const { updateLoanType, updatePropertyType } = state;
+  const { loanType, propertyType } = state;
   return {
-    updateLoanType,
-    updatePropertyType
+    loanType,
+    propertyType
   };
 }
 export default connect(mapStateToProps, {

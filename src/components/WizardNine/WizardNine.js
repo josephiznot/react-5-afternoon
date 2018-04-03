@@ -9,9 +9,21 @@ class WizardNine extends Component {
       <div className="parent-div">
         <div className="vert-align">
           <p>What is your address?</p> <br />
-          <input type="text" placeholder="Line One" onChange={updateAOne} />
-          <input type="text" placeholder="Line Two" onChange={updateATwo} />
-          <input type="text" placeholder="Line Three" onChange={updateAThree} />
+          <input
+            type="text"
+            placeholder="Line One"
+            onChange={e => updateAOne(e.target.value)}
+          />
+          <input
+            type="text"
+            placeholder="Line Two"
+            onChange={e => updateATwo(e.target.value)}
+          />
+          <input
+            type="text"
+            placeholder="Line Three"
+            onChange={e => updateAThree(e.target.value)}
+          />
           <Link to="/wTen">
             <button className="margin-btn"> Next </button>
           </Link>

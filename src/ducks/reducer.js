@@ -33,6 +33,7 @@ const ADDRESS_THREE = "ADDRESS_THREE";
 const FIRST_NAME = "FIRST_NAME";
 const LAST_NAME = "LAST_NAME";
 const EMAIL = "EMAIL";
+
 function reducer(state = initialState, action) {
   switch (action.type) {
     case UPDATE_LOAN_TYPE:

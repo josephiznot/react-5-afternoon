@@ -5,6 +5,11 @@ import { updateEmail, updateFirst, updateLast } from "../../ducks/reducer";
 class WizardTen extends Component {
   render() {
     const { updateEmail, updateFirst, updateLast } = this.props;
+    console.log(this.props.firstName);
+    console.log(this.props.lastName);
+    console.log(this.props.email);
+    // console.log(updateFirst);
+    // console.log(updateLast);
     return (
       <div className="parent-div">
         <div className="vert-align">
