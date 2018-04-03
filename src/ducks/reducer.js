@@ -115,7 +115,7 @@ export function updateCost(cost) {
     payload: cost
   };
 }
-export function updateDPayment(downPayment) {
+export function updatePayment(downPayment) {
   return {
     type: DOWN_PAYMENT,
     payload: downPayment

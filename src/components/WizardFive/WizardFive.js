@@ -27,6 +27,6 @@ class WizardFive extends Component {
 
 function mapStateToProps(state) {
   const { realEstateAgent } = state;
-  return realEstateAgent;
+  return { realEstateAgent };
 }
 export default connect(mapStateToProps, { updateAgent })(WizardFive);

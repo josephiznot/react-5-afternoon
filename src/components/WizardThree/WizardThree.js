@@ -36,6 +36,6 @@ class WizardThree extends Component {
 }
 function mapStateToProps(state) {
   const { propToBeUsedOn } = state;
-  return propToBeUsedOn;
+  return { propToBeUsedOn };
 }
 export default connect(mapStateToProps, { updateProp })(WizardThree);

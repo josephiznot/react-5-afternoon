@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+
 import { connect } from "react-redux";
+
 class WizardEleven extends Component {
   render() {
     return (
@@ -119,7 +121,8 @@ class WizardEleven extends Component {
     );
   }
 }
-const mapStateToProps = state => {
+
+var mapStateToProps = state => {
   return {
     loanType: state.loanType,
     propertyType: state.propertyType,
@@ -139,4 +142,5 @@ const mapStateToProps = state => {
     email: state.email
   };
 };
+
 export default connect(mapStateToProps)(WizardEleven);

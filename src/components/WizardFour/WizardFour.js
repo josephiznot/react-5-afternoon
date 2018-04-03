@@ -25,6 +25,6 @@ class WizardFour extends Component {
 }
 function mapStateToProps(state) {
   const { found } = state;
-  return found;
+  return { found };
 }
 export default connect(mapStateToProps, { updateFound })(WizardFour);

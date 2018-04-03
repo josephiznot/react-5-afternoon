@@ -52,6 +52,6 @@ class WizardEight extends Component {
 
 function mapStateToProps(state) {
   const { history } = state;
-  return history;
+  return { history };
 }
 export default connect(mapStateToProps, { updateHistory })(WizardEight);
